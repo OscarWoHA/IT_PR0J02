@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bestillingsskjema</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: rgb(255, 69, 0);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: rgb(255, 69, 0);
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="nav">
+        <ul>
+          <li class="left"><a href="index.html"> Hjem </a></li>
+          <li class="left" id="active"><a href="Reiseoversikt.html"> Reiseoversikt </a></li>
+          <li class="left">
+            <div class="dropdown">
+              <a href="KontaktOss.html" class="dropdown-button"> Kontakt oss
+                <i class="dropdown-arrow">&#x25BC</i></a>
+              <div class="dropdown-content">
+                <a href="OmOss.html">Om oss</a>
+                <a href="Chat.html">Chat med oss</a>
+                <a href="Vilkår.html">Vilkår & betingelser</a>
+                <a href="Bildedeling.html"> Del bilder fra din reise </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a href="index.html" id="logo"><img src="../Bilder/logo.png"> </a>
+      </div>
+    </nav>
+  </header>
+  <h2>Bestill reiser </h2>
+  <p>Alle felter markert med * må fylles ut!</p>
+
+  <div class="container">
+    <form action="takk.html" id="bestilling">
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Reise*</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country">
+            <option value="Dubai">Dubai</option>
+            <option value="Paris">Paris</option>
+            <option value="London">London</option>
+            <option value="New York"> New York</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Fornavn*</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Navnet ditt.." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Etternavn*</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Ditt etternavn..." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="phone">Mobilnummer*</label>
+        </div>
+        <div class="col-75">
+          <input type="tel" id="phone" name="phone" placeholder="Tlf/Mobilnummer" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">E-postadresse*</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" placeholder="OlaNordmann@eksempel.com" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="antall">Antall reisende*</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="antall" name="antall" required max="10" min="0">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="info">Annen info</label>
+        </div>
+        <div class="col-75">
+          <textarea id="info" name="info" style="height:100px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Bestill" >
+      </div>
+    </form>
+  </div>
+
+
+  <footer>
+    <article class="kontakt">
+      <p>
+        <a href="KontaktOss.html">
+          <span id="kontakt">Kontakt Oss </span>
+        </a>
+        <br> Tlf: +47 908 00 543
+        <br> John Selmers vei 28 4846 Arendal
+        <br> Åpningstid: 07.00 - 15.00
+        <br> Urban_Arendal@hotmail.com
+      </p>
+    </article>
+
+    <article class="footer-bottom">
+      <p id="design">Design av: <a href="OmOss.html">Urban Arendal Inc, Copyright &copy; 2019</a></p>
+    </article>
+
+    <article class="footer-social-icons">
+      <ul>
+        <li><a href="https://www.facebook.com/groups/2263650880331451/" target="blank"><i
+              class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.facebook.com/groups/2263650880331451/" target="blank"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li><a href="https://www.facebook.com/groups/2263650880331451/" target="blank"><i
+              class="fa fa-google-plus"></i></a></li>
+        <li><a href="https://www.facebook.com/groups/2263650880331451/" target="blank"><i class="fa fa-youtube"></i></a>
+        </li>
+      </ul>
+    </article>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <script src="assets/js/firebase/script.js"></script>
+</body>
+
+</html>

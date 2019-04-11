@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reiseklubben</title>
+
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <!-- Innholdet her lastes dynamisk takket være JavaScriptet headerFooter.js -->
+</header>
+
+<div class="content kontakt">
+    <form class="kontaktForm" action="" method="post">
+        <h1>Evaluer oss</h1>
+        Navn<br/>
+        <input name="name" id="navn" type="text" required>
+        Epost<br/>
+        <input name="email" id="epost" type="email" required>
+        Gi oss en score fra 1 - 10 <br/>
+        <input name="score" id="score" type="number" required>
+        Fortell oss hva du syntes om din reise.<br/>
+        <textarea name="melding" id="melding" required></textarea>
+        <button class="knapp" type="submit" onclick="sendEvaluering();">Send evaluering</button>
+    </form>
+</div>
+
+<footer class="p-5">
+    <!-- Innholdet her lastes dynamisk takket være JavaScriptet headerFooter.js -->
+</footer>
+
+<script src="assets/js/headerFooter.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDjMMvTHfU8GulE5EuFj5SdIlytHwE-Jpo",
+        authDomain: "it-proj02.firebaseapp.com",
+        databaseURL: "https://it-proj02.firebaseio.com",
+        projectId: "it-proj02",
+        storageBucket: "",
+        messagingSenderId: "181492425027"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="assets/js/kontakt.js"></script>
+<script>
+    initializeHeaderAndFooter()
+</script>
+</body>
+</html>

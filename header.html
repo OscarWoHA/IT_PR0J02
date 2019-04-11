@@ -1,11 +1,21 @@
-<nav>
-    <a href="#">Hjem</a>
-    <a href="#">Reiser</a>
-    <a href="#">Chat</a>
-    <a href="#">Bestilling</a>
-</nav>
-
-<div class="jumbotron p-5">
-    <h1>Reiseklubben A/S</h1>
-    <p>Avslapning, opplevelser og tur</p>
+<div class="jumbotron p-2">
+    <a class="index.html" id="headerImgLink"><img src="https://dummyimage.com/64/000/fff"
+                                                  alt="Reiseklubben A/S logo"></a>
+    <div>
+        <h1>Reiseklubben A/S</h1>
+        <p>Avslapning, opplevelser og tur</p>
+    </div>
 </div>
+<nav id="navbar">
+    <a href="javascript:void(0);" id="menuBars" onclick="toggleMenu(true)">&#9776;</a>
+    <div id="navbarWrapper">
+        <a href="javascript:void(0);" id="exitMenu" onclick="toggleMenu(false)">&#10006</a>
+        <a href="index.html">Hjem</a>
+        <a href="#">Reisemål</a>
+        <a href="om.html">Om reiseklubben</a>
+        <a href="kontakt.html">Kontakt oss</a>
+        <a href="#">Chat med oss</a>
+        <a href="evaluering.html">Evalueringskjema</a>
+        <a href="#">Dine ferieminner</a>
+    </div>
+</nav>
